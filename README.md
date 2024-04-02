@@ -1,5 +1,5 @@
 # About Project
-Maze Generator and Solver built using Python
+Maze Generator and Solver built with Python
 
 ## How to use Maze and MazeVisualizer
 Use Maze and MazeVisulizer to open a GUI to view maze generation
@@ -14,7 +14,7 @@ maze = Maze(num_rows=40, num_cols=40)
 # Starts generatring maze at (5, 10). End cell is set to (25, 15)
 maze_2 = Maze(num_rows=60, num_cols=40, start_row=5, start_col=10, end_row=25, end_col=15) 
 # If seed is provided, the seed is used to generate the maze
-maze_3 = Maze(num_rows=60, num_cols=60, seed="test seed")
+maze_3 = Maze(num_rows=20, num_cols=20, seed="test seed")
 
 # How to use MazeVisualizer
 

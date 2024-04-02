@@ -117,7 +117,7 @@ class Maze:
     def to_grid(self):
         grid = []
         rows = self.num_rows
-        cols = self.num_rows
+        cols = self.num_cols
         for row in range(rows):
             top_arr = []
             middle_arr = []
