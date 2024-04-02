@@ -56,7 +56,9 @@ maze.to_txt(solution=True) # Populates txt with solution
 ```
 
 ## Exporting maze to JSON
-Use Maze.to_json to export maze generation to gif
+Use Maze.to_json to export maze to JSON. 
+
+See [to_json()](docs/Maze.md#to_json) for JSON format
 ```python
 from src.Maze import Maze
 maze = Maze(num_rows=40, num_cols=40)

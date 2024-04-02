@@ -197,4 +197,4 @@ Both of these are representations of the generated Maze in the form of a 2D list
 | 3          | End Cell
 | 4          | Solution Path
 
-**Maze.grid_solution** Replaces the 0s in **Maze.grid** representing the solution path with 4s
+**Maze.grid_solution** Replaces the 0s representing the solution path in **Maze.grid** with 4s
