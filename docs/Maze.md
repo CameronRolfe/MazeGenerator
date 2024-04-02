@@ -26,7 +26,7 @@ maze_3 = Maze(num_rows=60, num_cols=60, seed="test seed")
 ```
 
 # Functions
-## to_image(fileName="maze", cell_size=15, solution=False)
+## to_image(fileName="maze", cell_size=15, show_solution=False)
 Exports png of Maze. When solution is True image will contain solution
 ```python
 import maze from src/Maze
@@ -44,7 +44,7 @@ maze.to_gif() # Creates maze.gif
 maze.to_gif(fileName="maze_2", cell_size=10) # Creates maze_2.gif. Each cell is 10 pixels x 10 pixels
 ```
 
-## to_txt(file_name="maze")
+## to_txt(file_name="maze", show_solution=False)
 Exports maze to txt file
 ```python
 import maze from src/Maze
