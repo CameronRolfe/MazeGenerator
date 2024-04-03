@@ -1,4 +1,3 @@
-#import tkinter as tk
 from tkinter import *
 import time
 from src.Maze import Maze
@@ -10,14 +9,14 @@ class MazeVisualizer:
             self.visited = False
            
         def draw(self, cell, start = False, end = False, solution = False):
-            row, col = cell
             cellColour = "red" if solution else "white"
             if (start): cellColour = "green" 
             elif (end): cellColour = "yellow"
-            self.canvas.create_rectangle(self._get_canvas_coords(row, col), fill = cellColour, outline="")
+            self.canvas.create_rectangle(self._get_canvas_coords(cell), fill = cellColour, outline="")
 
-        # Converts row and col to canvas coordinates
-        def _get_canvas_coords(self, row, col):
+        # Converts cell to canvas coordinates
+        def _get_canvas_coords(self, cell):
+            row, col = cell
             cell_size = self.cell_size
             x1 = col * cell_size
             y1 = row * cell_size

@@ -10,9 +10,23 @@ To account for the cell walls, the generated maze will have ((2 x number of rows
 
 For example, a Maze that is created with the arguments num_rows=40 and num_cols=60 will generate a maze that is represented with 81 rows and 121 columns
 
+Maze has two properties **Maze.grid** and **Maze.grid_solution**
+
+Both of these are representations of the generated Maze in the form of a 2D list of numbers where each number corresponds to a cell type
+
+| Cell Type | Description                                                  
+| ---        |    ----                                                     
+| 0          | Walkable Cell                                                  
+| 1          | Wall                                        
+| 2          | Start Cell
+| 3          | End Cell
+| 4          | Solution Path
+
+**Maze.grid_solution** Replaces the 0s representing the solution path in **Maze.grid** with 4s
+
 # Examples
 ```python
-import maze from src/Maze
+from src.Maze import Maze 
 # Some examples of mazes
 
 # Create Maze with minimum arguments
@@ -26,28 +40,28 @@ maze_3 = Maze(num_rows=60, num_cols=60, seed="test seed")
 ```
 
 # Functions
-## to_image(fileName="maze", cell_size=15, show_solution=False)
+## to_image(file_name="maze", cell_size=15, show_solution=False)
 Exports png of Maze. When solution is True image will contain solution
 ```python
-import maze from src/Maze
+from src.Maze import Maze 
 maze = Maze(num_rows=40, num_cols=40)
 maze.to_image() # Creates maze.png
-maze.to_image(file_name="maze_solution", solution=True) # Creates maze_solution.png (Image includes solution)
+maze.to_image(file_name="maze_solution", show_solution=True) # Creates maze_solution.png (Image includes solution)
 ```
 
-## to_gif(fileName = "maze", cell_size=15)
+## to_gif(file_name = "maze", cell_size=10)
 Exports gif of maze generation
 ```python
-import maze from src/Maze
+from src.Maze import Maze 
 maze = Maze(num_rows=40, num_cols=40)
 maze.to_gif() # Creates maze.gif
-maze.to_gif(fileName="maze_2", cell_size=10) # Creates maze_2.gif. Each cell is 10 pixels x 10 pixels
+maze.to_gif(file_name="maze_2", cell_size=15) # Creates maze_2.gif. Each cell is 15 pixels x 15 pixels
 ```
 
 ## to_txt(file_name="maze", show_solution=False)
 Exports maze to txt file
 ```python
-import maze from src/Maze
+from src.Maze import Maze 
 
 # Examples of to_txt
 maze = Maze(num_rows=40, num_cols=40)
@@ -79,10 +93,10 @@ Returns json representation of Maze in the following format
 }
 
 ```
-## print()
+## print(show_solution=False)
 Prints maze to console
 ```python
-import maze from src/Maze
+from src.Maze import Maze 
 maze = Maze(num_rows=20, num_cols=20, seed="test seed")
 maze.print()
 print(maze) # This also works and is equivalent to maze.print()
@@ -132,7 +146,7 @@ Output
 #########################################
 ```
 ```python
-import maze from src/Maze
+from src.Maze import Maze 
 maze = Maze(num_rows=20, num_cols=20, seed="test seed")
 maze.print(show_solution=True)
 ```
@@ -183,18 +197,3 @@ Output when show_solution is True
 
 ## generate_maze()
 Used to generate new maze.
-
-# Grid
-Maze has two properties **Maze.grid** and **Maze.grid_solution**
-
-Both of these are representations of the generated Maze in the form of a 2D list of numbers where each number corresponds to a cell type
-
-| Cell Type | Description                                                  
-| ---        |    ----                                                     
-| 0          | Walkable Cell                                                  
-| 1          | Wall                                        
-| 2          | Start Cell
-| 3          | End Cell
-| 4          | Solution Path
-
-**Maze.grid_solution** Replaces the 0s representing the solution path in **Maze.grid** with 4s
