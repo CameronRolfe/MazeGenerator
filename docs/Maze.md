@@ -26,7 +26,7 @@ Both of these are representations of the generated Maze in the form of a 2D list
 
 # Examples
 ```python
-from src.Maze import Maze 
+from CamsMazes.maze import Maze
 # Some examples of mazes
 
 # Create Maze with minimum arguments
