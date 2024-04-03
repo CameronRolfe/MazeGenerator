@@ -1,24 +1,16 @@
 # About Project
 Maze Generator and Solver built with Python
 
-## Install Requirements
-Currently, there is only one requirement for the project and that is the [Pillow](https://pypi.org/project/pillow/) library.
-
-Install the requirements using one of the following commands
-
+## Install
 ```
-Option #1
-pip install -r requirements.txt
-
-Option #2
-py -m pip install -r requirements.txt
+pip install CamsMazes
 ```
 
 ## How to use Maze and MazeVisualizer
 Use Maze and MazeVisulizer to open a GUI to view maze generation
 ```python
-from src.Maze import Maze
-from src.MazeVisualizer import MazeVisualizer
+from CamsMazes.maze import Maze
+from CamsMazes.maze_visaulizer import MazeVisualizer
 
 # How to use Maze
 
