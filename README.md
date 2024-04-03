@@ -81,8 +81,8 @@ maze.print()
 maze.print(show_solution=True) # Maze Text will include solution path
 ```
 
-# [Maze](docs/Maze.md)
+# [Maze](https://github.com/CameronRolfe/MazeGenerator/blob/main/docs/Maze.md)
 Exhaustive documentation for Maze
 
-# [MazeVisualizer](docs/MazeVisualizer.md)
+# [MazeVisualizer](https://github.com/CameronRolfe/MazeGenerator/blob/main/docs/MazeVisualizer.md)
 Exhaustive documentation for MazeVisualizer
