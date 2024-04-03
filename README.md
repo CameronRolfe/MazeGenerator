@@ -2,7 +2,7 @@
 Maze Generator and Solver built with Python
 
 ## Install Requirements
-Currently, there is only one requirement for the project and that is the Pillow library.
+Currently, there is only one requirement for the project and that is the [Pillow](https://pypi.org/project/pillow/) library.
 
 Install the requirements using one of the following commands
 
