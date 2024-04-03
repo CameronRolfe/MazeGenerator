@@ -1,2 +1,4 @@
 *pyc
 .venv
+dist/
+src/CamsMazes.egg-info/

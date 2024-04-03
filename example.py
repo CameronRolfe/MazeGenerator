@@ -1,5 +1,5 @@
-from src.Maze import Maze
-from src.MazeVisualizer import MazeVisualizer
+from CamsMazes.maze import Maze
+from CamsMazes.maze_visualizer import MazeVisualizer
 
 # How to use Maze
 

@@ -1,6 +1,8 @@
 from tkinter import *
 import time
-from src.Maze import Maze
+#from .maze import Maze
+from maze import Maze
+
 class MazeVisualizer:
     class CellVisualizer:
         def __init__(self, canvas, cell_size):
