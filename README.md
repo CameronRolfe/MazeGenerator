@@ -2,6 +2,8 @@
 Maze Generator and Solver built with Python
 
 ## Install
+[CamsMazes PyPi](https://pypi.org/project/CamsMazes/)
+
 ```
 pip install CamsMazes
 ```
