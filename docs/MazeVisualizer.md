@@ -13,8 +13,8 @@ Using Maze.generation_path, MazeVisualizer is able to simulate the generation of
 
 ## Examples
 ```python
-import Maze from src.Maze
-import MazeVisualizer fromn src.MazeVisualizer
+from CamsMazes.maze import Maze
+from CamsMazes.maze_visualizer import MazeVisualizer
 
 # Must first create Maze
 maze = Maze(num_rows=40, num_cols=40)

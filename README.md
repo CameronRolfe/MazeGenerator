@@ -36,7 +36,7 @@ maze_visualizer3 = Maze(maze_3, cell_size=10, delay_ms=2) # Delay (in millisecon
 ## Exporting maze to image
 Use Maze.to_image to export maze to png
 ```python
-from src.Maze import Maze 
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
 maze.to_img(file_name="maze") # Creates maze.png
 maze.to_img(file_name="maze_solution", solution=True) # Creates maze_solution.png (Image contains solution)
@@ -46,7 +46,7 @@ maze.to_img(file_name="maze_2", cell_size=10) # Creates maze_2.png where each ce
 ## Exporting maze generation to gif
 Use Maze.to_gif to export maze generation to gif
 ```python
-from src.Maze import Maze
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
 maze.to_gif(file_name="maze") # Creates maze.gif
 maze.to_gif(file_name="maze_2", cell_size=10) # Creates maze_2.gif where each cell is 10 pixels by 10 pixels
@@ -55,7 +55,7 @@ maze.to_gif(file_name="maze_2", cell_size=10) # Creates maze_2.gif where each ce
 ## Exporting maze to txt file
 Use Maze.to_txt to export maze to txt
 ```python
-from src.Maze import Maze
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
 maze.to_txt() # Creates maze.txt
 maze.to_txt(file_name="maze_2") # file_name can be supplied (maze_2.txt is created)
@@ -67,7 +67,7 @@ Use Maze.to_json to export maze to JSON.
 
 See [to_json()](docs/Maze.md#to_json) for JSON format
 ```python
-from src.Maze import Maze
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
 json = maze.to_json()
 ```
@@ -75,7 +75,7 @@ json = maze.to_json()
 ## Printing maze to console
 Use Maze.print to print maze to console
 ```python
-from src.Maze import Maze
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
 maze.print()
 maze.print(show_solution=True) # Maze Text will include solution path

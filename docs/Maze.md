@@ -43,7 +43,7 @@ maze_3 = Maze(num_rows=60, num_cols=60, seed="test seed")
 ## to_image(file_name="maze", cell_size=15, show_solution=False)
 Exports png of Maze. When solution is True image will contain solution
 ```python
-from src.Maze import Maze 
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
 maze.to_image() # Creates maze.png
 maze.to_image(file_name="maze_solution", show_solution=True) # Creates maze_solution.png (Image includes solution)
@@ -52,7 +52,7 @@ maze.to_image(file_name="maze_solution", show_solution=True) # Creates maze_solu
 ## to_gif(file_name = "maze", cell_size=10)
 Exports gif of maze generation
 ```python
-from src.Maze import Maze 
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
 maze.to_gif() # Creates maze.gif
 maze.to_gif(file_name="maze_2", cell_size=15) # Creates maze_2.gif. Each cell is 15 pixels x 15 pixels
@@ -61,7 +61,7 @@ maze.to_gif(file_name="maze_2", cell_size=15) # Creates maze_2.gif. Each cell is
 ## to_txt(file_name="maze", show_solution=False)
 Exports maze to txt file
 ```python
-from src.Maze import Maze 
+from CamsMazes.maze import Maze
 
 # Examples of to_txt
 maze = Maze(num_rows=40, num_cols=40)
@@ -96,7 +96,7 @@ Returns json representation of Maze in the following format
 ## print(show_solution=False)
 Prints maze to console
 ```python
-from src.Maze import Maze 
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=20, num_cols=20, seed="test seed")
 maze.print()
 print(maze) # This also works and is equivalent to maze.print()
@@ -146,7 +146,7 @@ Output
 #########################################
 ```
 ```python
-from src.Maze import Maze 
+from CamsMazes.maze import Maze
 maze = Maze(num_rows=20, num_cols=20, seed="test seed")
 maze.print(show_solution=True)
 ```
