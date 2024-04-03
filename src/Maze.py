@@ -1,8 +1,8 @@
 import random
 from random import randint
 import json
-from PIL import Image, ImageDraw
 import copy
+from PIL import Image, ImageDraw
 
 class Maze:
     class Cell:
