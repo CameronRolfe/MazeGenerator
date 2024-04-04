@@ -1,6 +1,6 @@
 from tkinter import *
 import time
-from maze import Maze
+from .maze import Maze
 
 class MazeVisualizer:
     class CellVisualizer:
