@@ -40,8 +40,10 @@ maze_3 = Maze(num_rows=60, num_cols=60, seed="test seed")
 ```
 
 # Functions
-## to_image(file_name="maze", cell_size=15, show_solution=False)
-Exports png of Maze. When solution is True image will contain solution
+## to_image(file_name="maze", file_ext = "png", cell_size=15, show_solution=False)
+Exports image of Maze. When solution is True image will contain solution
+
+Supports PNG, JPG and JPEG for file_ext
 ```python
 from CamsMazes.maze import Maze
 maze = Maze(num_rows=40, num_cols=40)
@@ -69,8 +71,10 @@ maze.to_txt() # Create maze.txt
 maze.to_txt(file_Name="maze_sol", show_solution=True) # Creates maze_sol.txt (txt will be populated with solution)
 ```
 
-## to_json()
+## to_json(image_cell_size=None)
 Returns json representation of Maze in the following format
+
+The image contained in img_base64 will reflect the image_cell_size if provided.
 ```json
 {
     "numRows": Maze.num_rows,
@@ -89,9 +93,9 @@ Returns json representation of Maze in the following format
         "mazeSolution": Maze.grid_solution,
         "generationPath": Maze.generation_path,
         "solutionPath":  Maze.solution
-    }
+    },
+    "img_base64": Maze.to_image(save=False, cell_size=image_cell_size)[1]
 }
-
 ```
 ## print(show_solution=False)
 Prints maze to console

@@ -206,8 +206,9 @@ class Maze:
         return grid
 
     # Returns JSON representation of Maze
-    def to_json(self):
-        img_str = self.to_image(save = False)[1]
+    def to_json(self, image_cell_size = None):
+        img_arr = self.to_image(save = False, cell_size=image_cell_size) if image_cell_size else self.to_image(save=False)
+        img_str = img_arr[1]
         maze = {
             "numCols": self.num_cols,
             "numRows": self.num_rows,
