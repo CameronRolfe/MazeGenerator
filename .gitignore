@@ -2,3 +2,4 @@
 .venv
 dist/
 src/CamsMazes.egg-info/
+maze_test.py

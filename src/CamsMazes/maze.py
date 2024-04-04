@@ -3,6 +3,8 @@ from random import randint
 import json
 import copy
 from PIL import Image, ImageDraw
+from io import BytesIO
+import base64
 
 class Maze:
     class Cell:
@@ -205,6 +207,7 @@ class Maze:
 
     # Returns JSON representation of Maze
     def to_json(self):
+        img_str = self.to_image(save = False)[1]
         maze = {
             "numCols": self.num_cols,
             "numRows": self.num_rows,
@@ -222,7 +225,8 @@ class Maze:
                 "mazeSolution": self.grid_solution,
                 "generationPath": self.generation_path,
                 "solutionPath": self.solution
-            }
+            },
+            "img_base64": img_str
         }
         return json.dumps(maze)
     
@@ -268,19 +272,23 @@ class Maze:
     def __str__(self):
         return self._get_maze_text(show_solution=False)
 
-    # Creates png image of maze
-    def to_image(self, fileName = "maze", cell_size=15, showSolution = False):
+    # Creates image of maze
+    def to_image(self, file_name = "maze", file_ext = "png", cell_size=15, save=True, show_solution = False):
         image = Image.new("RGB", self._get_image_size(cell_size), "black")
         draw = ImageDraw.Draw(image)
         img_colour_map = {0: "white", 1: "black", 2: "green", 3: "yellow", 4: "red"}
-        grid = self.grid_solution if showSolution else self.grid
+        grid = self.grid_solution if show_solution else self.grid
+        buff = BytesIO()
         for row in range(self.grid_rows):
             for col in range(self.grid_cols):
                 cell_type = grid[row][col]
                 cell_colour = img_colour_map[cell_type]
                 draw.rectangle(self._convert_to_image_coords(cell_size, row, col), fill=cell_colour)
-        image.save(f"{fileName}.png")
-        return image
+        if (save): image.save(f"{file_name}.{file_ext}")
+        file_ext = "jpeg" if file_ext == "jpg" else file_ext 
+        image.save(buff, format=file_ext)
+        img_str = base64.b64encode(buff.getvalue()).decode("utf-8")
+        return [image, img_str]
     
     # Creates gif of maze generation
     def to_gif(self, file_name="maze", cell_size=10):
